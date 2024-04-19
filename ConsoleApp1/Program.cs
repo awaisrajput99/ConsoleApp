@@ -7,6 +7,20 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
+    class Customer
+    {
+        String _firstname;
+        String _lastname;
+        public Customer(String firstname, String lastname)
+        {
+            this._firstname = firstname;
+            this._lastname = lastname;
+        }
+        public void printFullName()
+        {
+            Console.WriteLine("Full name is = {0} ",this._firstname+" "+this._lastname);
+        }
+    }
     internal class Program
     {
         static void Main(string[] args)
@@ -185,8 +199,9 @@ namespace ConsoleApp1
             }
             Console.ReadLine();
             */
-
-            Console.ReadLine();
+            Customer c1 = new Customer("Muhammad", "Awais");
+            c1.printFullName();
+            //Console.ReadLine();
         }
     }
 }
