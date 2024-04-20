@@ -8,8 +8,32 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
+    // Lecture 22 Method Hiding
+    public class Employee
+    {
+        public String Firstname;
+        public String Lastname;
+        public void PrintFullName()
+        {
+            Console.WriteLine(Firstname + " " + Lastname);
+        }
+    }
+    public class partTimeEmployee : Employee
+    {
+        public new void PrintFullName()
+        {
+            //base.PrintFullName();
+            //1st method for hidding is to use base keyword
+            Console.WriteLine(Firstname + " " + Lastname+"-Contractor");
+        }
+    }
+    public class fullTimeEmployee : Employee
+    {
+        
+    }
+    
     //Lecture 21 Parent and Child Class in Inheritance
-    public class parentClass
+    /*public class parentClass
     {
         public parentClass() {
             Console.WriteLine("ParentClass Constructor Called");
@@ -24,35 +48,35 @@ namespace ConsoleApp1
         {
             Console.WriteLine("ChildClass Constructor Called");
         }
-    }
+    }*/
     // Lecture 21(Inheritance in C#)
-     /*public class Employee
-    {
-        public String Firstname;
-        public String Lastname;
-        public String Email;
-        public void PrintFullName()
-        {
-            Console.WriteLine(Firstname + " " + Lastname);
-        }
-    }
-    public class fullTimeEmployee : Employee
-    {
-        public float yearlySalary;
-    }
-    public class partTimeEmployee : Employee
-    {
-        public float hourlySalary;
-    } 
-    // This class is for the concept of multilevel inheritance
-    public class A : partTimeEmployee
-    {
-        public void printForMultilevelInheritance()
-        {
-            Console.WriteLine("I am Multilevel Inheritance");
-        }
-    }
-     */
+    /*public class Employee
+   {
+       public String Firstname;
+       public String Lastname;
+       public String Email;
+       public void PrintFullName()
+       {
+           Console.WriteLine(Firstname + " " + Lastname);
+       }
+   }
+   public class fullTimeEmployee : Employee
+   {
+       public float yearlySalary;
+   }
+   public class partTimeEmployee : Employee
+   {
+       public float hourlySalary;
+   } 
+   // This class is for the concept of multilevel inheritance
+   public class A : partTimeEmployee
+   {
+       public void printForMultilevelInheritance()
+       {
+           Console.WriteLine("I am Multilevel Inheritance");
+       }
+   }
+    */
 
     //Lecture 19 Class
     /*class Customer
@@ -246,7 +270,7 @@ namespace ConsoleApp1
                     break;
             }
             Console.ReadLine();
-            */ 
+            */
             /*Customer c1 = new Customer("Muhammad", "Awais");
             c1.printFullName();*/
             /* Lecture 21 main
@@ -265,8 +289,25 @@ namespace ConsoleApp1
             //A a1= new A();
             //a1.printForMultilevelInheritance();
             */
-            ChildClass CC = new ChildClass();
-            //Console.ReadLine();
+            //Lecture 21 remaining
+            //ChildClass CC = new ChildClass();
+
+            // Lecture 22 Remaining
+            fullTimeEmployee fTE = new fullTimeEmployee();
+            fTE.Firstname = "FullFirsttime";
+            fTE.Lastname = "Fulllasttime";
+            fTE.PrintFullName();
+
+            // 3rd method for hiding
+            // by using parent class refrence variable
+            Employee PTE = new partTimeEmployee();
+            PTE.Firstname = "PartFirsttime";
+            PTE.Lastname = "PartLastTime";
+            //2nd Method for hiding
+            //((Employee)PTE).PrintFullName();
+            PTE.PrintFullName();
+
+            Console.ReadLine();
 
         }
     }

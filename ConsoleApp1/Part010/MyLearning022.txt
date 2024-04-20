@@ -1,0 +1,14 @@
+My Notes: 
+Date of lecture taken: - 
+  20 April, 2014
+What did I learn? 
+ Method Hidding
+ Different ways to invoke hidden base class member from drived class.
+1.Base keywords
+2.cast child type to parent type and invoke the hidden member
+3.ParnentClass PC = new ChildClass()
+PC.HiddenMethod()
+
+What was challenging, if anything?  
+   It was little bit tricky but i hace did it.
+How did I resolve the challenges or problems when they appeared? 
