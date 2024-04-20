@@ -27,6 +27,14 @@ namespace ConsoleApp1
     {
         public float hourlySalary;
     } 
+    // This class is for the concept of multilevel inheritance
+    public class A : partTimeEmployee
+    {
+        public void printForMultilevelInheritance()
+        {
+            Console.WriteLine("I am Multilevel Inheritance");
+        }
+    }
 
     //Lecture 19 Class
     /*class Customer
@@ -233,6 +241,12 @@ namespace ConsoleApp1
             PTE.Firstname = "Abdul";
             PTE.Lastname = "Basit";
             PTE.PrintFullName();
+
+            // For Multilevel Inheritance
+            //A a1= new A();
+            //a1.printForMultilevelInheritance();
+
+
             //Console.ReadLine();
 
         }

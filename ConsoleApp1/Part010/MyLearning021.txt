@@ -1,0 +1,9 @@
+My Notes: 
+Date of lecture taken: - 
+  20 April, 2014
+What did I learn? 
+  Learning about Inheritance and its types
+  C# does not support multiple Inheritance but have a concept of multilevel inheritance
+What was challenging, if anything?  
+   
+How did I resolve the challenges or problems when they appeared? 
