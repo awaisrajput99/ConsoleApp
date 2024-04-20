@@ -2,12 +2,34 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.NetworkInformation;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    class Customer
+    // Lecture 21(Inheritance in C#)
+     public class Employee
+    {
+        public String Firstname;
+        public String Lastname;
+        public String Email;
+        public void PrintFullName()
+        {
+            Console.WriteLine(Firstname + " " + Lastname);
+        }
+    }
+    public class fullTimeEmployee : Employee
+    {
+        public float yearlySalary;
+    }
+    public class partTimeEmployee : Employee
+    {
+        public float hourlySalary;
+    } 
+
+    //Lecture 19 Class
+    /*class Customer
     {
         String _firstname;
         String _lastname;
@@ -20,7 +42,7 @@ namespace ConsoleApp1
         {
             Console.WriteLine("Full name is = {0} ",this._firstname+" "+this._lastname);
         }
-    }
+    }*/
     internal class Program
     {
         static void Main(string[] args)
@@ -198,10 +220,21 @@ namespace ConsoleApp1
                     break;
             }
             Console.ReadLine();
-            */
-            Customer c1 = new Customer("Muhammad", "Awais");
-            c1.printFullName();
+            */ 
+            /*Customer c1 = new Customer("Muhammad", "Awais");
+            c1.printFullName();*/
+             fullTimeEmployee FTE = new fullTimeEmployee();
+            //FTE.FirstName = "Muhammad";
+            //FTE.LastName = "Awais";
+            FTE.yearlySalary = 50000;
+            FTE.PrintFullName();
+
+            partTimeEmployee PTE = new partTimeEmployee();
+            PTE.Firstname = "Abdul";
+            PTE.Lastname = "Basit";
+            PTE.PrintFullName();
             //Console.ReadLine();
+
         }
     }
 }
