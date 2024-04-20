@@ -3,7 +3,9 @@ Date of lecture taken: -
   20 April, 2014
 What did I learn? 
   Learning about Inheritance and its types
-  C# does not support multiple Inheritance but have a concept of multilevel inheritance
+  1.C# does not support multiple Inheritance but have a concept of multilevel inheritance
+  2.Parent Class and Child Class Concept
+  3.How child class Controll Parent Class with the help of base()
 What was challenging, if anything?  
    
 How did I resolve the challenges or problems when they appeared? 

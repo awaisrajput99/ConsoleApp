@@ -8,8 +8,25 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
+    //Lecture 21 Parent and Child Class in Inheritance
+    public class parentClass
+    {
+        public parentClass() {
+            Console.WriteLine("ParentClass Constructor Called");
+        }
+        public parentClass(string Message)
+        {
+            Console.WriteLine(Message);
+        }
+    }
+    public class ChildClass: parentClass {
+        public ChildClass() : base("Drived Class controlling parent Class")
+        {
+            Console.WriteLine("ChildClass Constructor Called");
+        }
+    }
     // Lecture 21(Inheritance in C#)
-     public class Employee
+     /*public class Employee
     {
         public String Firstname;
         public String Lastname;
@@ -35,6 +52,7 @@ namespace ConsoleApp1
             Console.WriteLine("I am Multilevel Inheritance");
         }
     }
+     */
 
     //Lecture 19 Class
     /*class Customer
@@ -231,6 +249,7 @@ namespace ConsoleApp1
             */ 
             /*Customer c1 = new Customer("Muhammad", "Awais");
             c1.printFullName();*/
+            /* Lecture 21 main
              fullTimeEmployee FTE = new fullTimeEmployee();
             //FTE.FirstName = "Muhammad";
             //FTE.LastName = "Awais";
@@ -245,8 +264,8 @@ namespace ConsoleApp1
             // For Multilevel Inheritance
             //A a1= new A();
             //a1.printForMultilevelInheritance();
-
-
+            */
+            ChildClass CC = new ChildClass();
             //Console.ReadLine();
 
         }
