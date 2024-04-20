@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace ConsoleApp1
 {
     // Lecture 22 Method Hiding
-    public class Employee
+    /*public class Employee
     {
         public String Firstname;
         public String Lastname;
@@ -30,7 +30,7 @@ namespace ConsoleApp1
     public class fullTimeEmployee : Employee
     {
         
-    }
+    }*/
     
     //Lecture 21 Parent and Child Class in Inheritance
     /*public class parentClass
@@ -293,6 +293,7 @@ namespace ConsoleApp1
             //ChildClass CC = new ChildClass();
 
             // Lecture 22 Remaining
+            /*
             fullTimeEmployee fTE = new fullTimeEmployee();
             fTE.Firstname = "FullFirsttime";
             fTE.Lastname = "Fulllasttime";
@@ -300,12 +301,14 @@ namespace ConsoleApp1
 
             // 3rd method for hiding
             // by using parent class refrence variable
+            
             Employee PTE = new partTimeEmployee();
             PTE.Firstname = "PartFirsttime";
             PTE.Lastname = "PartLastTime";
             //2nd Method for hiding
             //((Employee)PTE).PrintFullName();
-            PTE.PrintFullName();
+            PTE.PrintFullName();*/
+
 
             Console.ReadLine();
 
